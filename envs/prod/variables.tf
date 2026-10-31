@@ -25,3 +25,28 @@ variable "volume_size" {
 variable "ssh_cidr" {
   type = list(string)
 }
+
+variable "cluster_name" {
+  type = string
+}
+
+variable "vpc_cidr" {
+  type = string
+}
+
+variable "kubernetes_version" {
+  type    = string
+  default = null
+}
+
+variable "eks_public_access_cidrs" {
+  type = list(string)
+}
+
+variable "node_instance_type" {
+  type = string
+}
+
+variable "node_desired_size" {
+  type = number
+}
