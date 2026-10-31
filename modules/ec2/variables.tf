@@ -3,8 +3,7 @@ variable "env" {
 }
 
 variable "name" {
-  type    = string
-  default = "web"
+  type = string
 }
 
 variable "instance_type" {

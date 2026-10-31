@@ -9,7 +9,7 @@ data "aws_ami" "amazon_linux" {
 }
 
 resource "aws_security_group" "this" {
-  name        = "${var.env}-${var.name}-sg"
+  name        = "${var.name}-sg"
   description = "SSH and HTTP access"
 
   ingress {
@@ -49,7 +49,7 @@ resource "aws_instance" "this" {
     volume_type = "gp3"
   }
 
-  tags = merge(local.tags, { Name = "${var.env}-${var.name}" })
+  tags = merge(local.tags, { Name = var.name })
 }
 
 locals {
