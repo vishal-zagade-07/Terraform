@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket       = "CHANGE-ME-tf-state-bucket"
+    bucket       = "vishal-terra-buck"
     key          = "prod/terraform.tfstate"
-    region       = "ap-south-1"
+    region       = "ap-southeast-2"
     use_lockfile = true
   }
 }
